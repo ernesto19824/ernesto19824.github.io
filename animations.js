@@ -31,7 +31,6 @@ function writeAnimation(){
         }
         setTimeout(() => {
             element.style.setProperty('--blink', '|');
-            console.log("hey");
         }, speed * (text.length + 1));
         
     });
@@ -52,8 +51,6 @@ function descendingLineAnimation(){
             duration = 1000 / 1000;
         }
         
-        console.log(speed);
-        console.log(duration);
 
         for(let i = 0; i<text.length; i++){
             element.innerHTML+=(`<span>${text[i]}</span>\n`);
