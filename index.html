@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/animations.css">
+
+        <script src="/animations.js" defer></script>
+        <script src="/scroll.js" defer></script>
+
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="container">
+            <div class="wrapper">
+                <a href="index.html"><h1 write-animation = "300">Augusto Mamani</h1></a>
+                <nav class="hide-on-mobile">
+                    <a href="#experiencia">experiencia</a>
+                    <a href="#proyectos">proyectos</a>
+                </nav>
+                <i class="fa fa-bars display-on-mobile" aria-hidden="true" onclick="displayNav()"></i>
+            </div>
+        </header>
+        <main class="container">
+            <div class="wrapper">
+                <div class="description" >
+                    <h2 class="hide-on-mobile" descending-line-animation = "100 100">¡Hola!</h2>
+                    <h2 class="hide-on-mobile" descending-line-animation="50 100">Soy desarrollador front end</h2> 
+                    <h2 class="display-on-mobile" descending-line-animation = "100 100">¡Hola!</h2>
+                    <h2 class="display-on-mobile" descending-line-animation="50 100">Soy desarrollador</h2> 
+                    <h2 class="display-on-mobile" descending-line-animation="50 100">front end</h2> 
+ 
+                    <p write-animation = "25" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                    <nav>
+                        <a target="_blank" href="https://github.com/ernesto19824"><i class="fa fa-github" aria-hidden="true"></i>                    </a>
+                    </nav>
+                </div>
+                <div class="photo" >
+                    <img rotate-image src="photo.jpg">
+                </div>
+                <nav class="mobile">
+                    <a href="#experiencia">experiencia</a>
+                    <a href="#proyectos">proyectos</a>
+                </nav>
+            </div>
+        </main>
+        <div style="position: relative; top: -5rem; width: 0px; height: 0px;" id="experiencia" ></div>
+        <section class="container">
+            <div class="wrapper">
+                <div class="description" >
+                    <h2 descending-line-animation="50 100">Experiencia</h2>
+                    <div class="images" >
+                        <img src="Arduino_Logo.svg.png">
+                        <img src="clang.svg.png">
+                        <img src="CSS3.svg.png">
+                        <img src="JavaScript-logo.png">
+                        <img src="html.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style="position: relative; top: -5rem; width: 0px; height: 0px;"id="proyectos"></div>
+        <footer class="container"  >
+            <div class="wrapper">
+                <div class="description" >
+                    <h2 descending-line-animation="50 100">Mis proyectos</h2>
+                    <p>Tienda virtual responsiva hecha con css html js php</p>
+                    <p><a target="_blank" href="https://augustomamani.com">augustomamani.com</a></p>
+                    <img src="augustomamani.png">
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

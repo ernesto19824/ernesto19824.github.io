@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+:root{
+    --page-max-width: 100rem;
+    --page-padding: 3rem;
+
+    --page-header-height: 5rem;
+    --page-gap: 2rem;
+    --page-top-padding: calc(var(--page-header-height) + var(--page-gap));
+}
+
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 100%;
+    text-decoration: none;
+    font-family: 'Tilt Warp', cursive;
+    scroll-behavior: smooth !important;
+}
+
+body{
+    padding-top: var(--page-top-padding) !important;
+    
+    /*background: rgb(34,29,35);
+    background: linear-gradient(90deg, rgba(34,29,35,1) 0%, rgba(79,56,36,1) 100%);
+    */
+    padding-bottom: var(--page-padding) !important;
+
+    background: rgb(111,66,193);
+    background: linear-gradient(90deg, rgba(111,66,193,1) 0%, rgba(41,25,70,1) 100%);
+}
+
+.display-on-mobile{
+    display: none !important;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 var(--page-padding);
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    max-width: var(--page-max-width);
+}
+
+header{
+    margin-top: calc(var(--page-top-padding) * -1);
+    height: var(--page-header-height);
+    background-color: rgba(0, 0, 0, 0.90);
+    position: fixed;
+    align-items: center;
+    z-index: 10;
+}
+
+header .wrapper{
+    flex-flow:row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header .wrapper a{
+    display: flex;
+    align-items:  center;
+}
+
+header .wrapper h1{
+    color: white;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5rem;
+    white-space:pre;
+}
+
+header .wrapper nav{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 100%;
+}
+
+header .wrapper nav a{
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: gray
+}
+
+header .wrapper nav a{
+    font-size: 2.5rem;
+    transition: 0.5s;
+    display: flex;
+    flex-flow: column;
+}
+
+header .wrapper nav a:hover{
+    color: white;
+    font-size: 3rem;
+}
+
+header .wrapper nav a::after{
+    width: 0px;
+    height: 0px;
+    transition: 0.5s;
+    content: "";
+}
+
+header .wrapper nav a:hover::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+main.container, footer.container, section.container{
+    padding: 0 calc(var(--page-padding) * 2);
+}
+
+main .wrapper{
+    flex-flow: row;
+    gap: var(--page-gap);
+    justify-content: space-between;
+}
+
+.description{
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: var(--page-gap);
+}
+
+
+.description h2{
+    color: white;
+    font-size: 2.5rem;
+    line-height: 125%;
+}
+
+.description h2 span{
+    line-height: 125%;
+}
+
+.description p{
+    margin: 0 var(--page-gap);
+    color: white;
+    font-size: 1.5rem;
+    margin-top: var(--page-gap);
+}
+
+i{
+    font-size: 3rem !important;
+    transition: 0.5s;
+    color: gray
+}
+
+i:hover{
+    color: white;
+    font-size: 3.5rem !important; 
+}
+
+main .wrapper .photo{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    width: 40rem;
+}
+
+main .wrapper .photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+main .wrapper .description{
+    font-size: 3rem;
+}
+
+main .wrapper .description nav{
+    height: 3.5rem;
+    display: flex;
+    width: 75%;
+    justify-content: space-evenly;
+    margin-top: auto;
+    margin-bottom: var(--page-gap);
+    align-items: center;
+}
+
+section .wrapper .images{
+    width: calc(100% - var(--page-gap) * 2);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-left: var(--page-gap);
+    margin-right: var(--page-gap);
+    padding-bottom: var(--page-gap);
+}
+
+section .wrapper .images img{
+    min-width: 5rem;
+    display: flex;
+    width: 10rem;
+}
+
+footer, section{
+    margin-top: var(--page-gap);
+}
+
+footer .wrapper, section .wrapper{
+    flex-flow: column;
+}
+
+footer .wrapper .description, section .wrapper .description{
+    height: auto;
+    padding-bottom: var(--page-gap);
+}
+
+footer a, section a{
+    color: white;
+    text-decoration: underline;
+}
+
+footer img, section img{
+    margin-top: var(--page-gap);
+    padding-left: var(--page-gap);
+    padding-right: var(--page-gap);
+    width: 100%;
+}
+
+@media only screen and (max-width: 75rem) {
+    main .wrapper{
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+
+    main .wrapper .photo{
+        width: 20rem;
+    }
+
+    main .wrapper .description nav{
+        margin-top: var(--page-gap);
+    }
+}
+
+@media only screen and (max-width: 50rem) {
+    :root{
+        --page-padding: 1rem;
+    }
+
+    header .wrapper h1{
+        letter-spacing: 0;
+    }
+
+    header .wrapper nav a{
+        font-size: 1.75rem;
+    } 
+
+    header .wrapper nav a:hover{
+        font-size: 2rem;
+    }    
+}
+
+@media only screen and (min-width: 40rem) {
+    nav.mobile{
+        display: none!important;
+    }
+}
+
+@media only screen and (max-width: 40rem) {
+    .hide-on-mobile{
+        display: none!important;
+    }
+    .display-on-mobile{
+        display: flex !important;
+    }
+
+    header .wrapper h1{
+        letter-spacing: 0;
+    }
+    header .wrapper{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .wrapper i:hover{
+        font-size: 2rem !important;
+    }
+    
+    nav.mobile{
+        width: 100vw !important;
+        display: none;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: calc(var(--page-gap) * -1);
+        margin-left: calc(var(--page-padding) * -1);
+        margin-right: calc(var(--page-padding) * -1);
+        background-color: rgba(0,0,0,0.75);
+    }
+    
+    nav.mobile a{
+        margin: 1rem 0;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 30rem) {
+    :root{
+        --page-padding: 0.5rem;
+    }
+    header .wrapper h1{
+        font-size: 1.5rem;
+    }
+    header .wrapper{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 25rem) {
+    .display-on-mobile{
+        font-size: 2rem!important;
+    }
+    :root{
+        --page-padding: 0px;
+    }
+    .photo{
+        width: 80vw !important;
+    }
+
+}
